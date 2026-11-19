@@ -1,7 +1,7 @@
 <?php 
 
 
-       class Funcionarios {
+       class Funcionários {
 
         public $Nome;
         public $Salario;
@@ -21,11 +21,24 @@
             echo "Seu Email";
         }
         function calcularBonus(){
-            if 
+            
+           if  ($_POST['salario'] >10000) {
+                $bonus = $_POST['salario'] * 0.10;
+                echo "O bônus do funcionário é: " . $bonus;
+                {
+                } {
+                    echo "O funcionario não tem direito a bônus.";
+                    return;
+                }
+            }
 
-              
-          
+            if  ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $this->Nome = $_POST['nome'];
+                    $this->Salario = $_POST['salario'];
+                    $this->Email = $_POST['email'];
+                    $this->calcularBonus();
 
+                }
+            }
 
-
-       }
+        }
